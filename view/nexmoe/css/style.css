@@ -1,0 +1,549 @@
+/*菜单*/
+
+
+/*滚动头像*/
+
+*{
+margin: 0;
+padding: 0;
+}
+a{
+	text-decoration: none;
+}
+/* 隐藏滚动条 */
+::-webkit-scrollbar
+{ 
+	width: 0px;
+	height: 0px;
+}
+.nav{
+	height: 56px;
+	width: 100%;
+	background-color: rgba(255,255,255,.4);
+	box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+.navSize{
+	position: relative;
+	height: 56px;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+
+/* 头像 */
+.avatar{
+	position: absolute;
+	top: 4px;
+	left: 5%;
+	width: 40px;
+	height: 40px;
+	border: 4px solid #ebe8e8;
+	border-radius: 50%;
+	transition: 1.2s;
+}
+
+/* 头像动画 */
+.avatar:hover{
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+}
+.navRight{
+	position: absolute;
+	top: 13px;
+	right: 5%;
+}
+
+/* 导航 */
+.navul{
+	display: none;
+	float: left;
+	margin-right: 20px;
+	height: 30px;
+	width: 100px;
+}
+.navli{
+	float: left;
+	list-style: none;
+	margin-left: 15px;
+	line-height: 30px;
+}
+.navli a{
+	font-size: 16px;
+	color: #000;
+	transition: color 0.2s ease-out,border 0.2s ease-out,opacity 0.2s ease-out;
+}
+.navli a:hover{
+	color: #35B995;
+}
+/* 定义动画 */
+@-webkit-keyframes fadeIn {
+0% {
+opacity: 0; /*初始状态 透明度为0*/
+}
+50% {
+opacity: 0; /*中间状态 透明度为0*/
+}
+100% {
+opacity: 1; /*结尾状态 透明度为1*/
+}
+}
+/* 伪类出现 */
+.navRight:hover ul{
+	display: table;
+	-webkit-animation-name: fadeIn; /*动画名称*/
+	-webkit-animation-duration: 0.8s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 100; /*动画次数*/
+	-webkit-animation-delay: 10s; /*延迟时间*/
+}
+/* 图标icon */
+.icon{
+	float: left;
+	width: 30px;
+	height: 30px;
+	background: url(/view/nexmoe/theme/align-right.png);
+	background-size:100% 100%;
+	transition: .8s;
+}
+/* 图标动画icon */
+.icon:hover{
+	background: url(/view/nexmoe/theme/close.png);
+	background-size:100% 100%;
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+}
+/* 自带样式 */
+/* 自带样式 */
+/*原有CSS*/
+
+
+      .nexmoe-item{
+
+          
+        margin: 2px -8px 0 !important;
+		padding: 10px !important;
+		border-radius: 5px;
+		background-color: rgba(255, 255, 255, .6);
+       
+		-webkit-box-shadow: 0 .5em 3em rgba(161, 177, 204, .4);
+		box-shadow: 0 .5em 3em rgba(161, 177, 204, .4);
+		background-color: rgba(255, 255, 255, .4) 
+          
+      }
+      
+      .mdui-shadow-3 {
+			margin: 20px -8px 0 !important;
+			padding: 15px !important;
+			border-radius: 5px;
+			background-color: rgba(255, 255, 255, .6);
+			-webkit-box-shadow: 0 .5em 3em rgba(161, 177, 204, .4);
+			box-shadow: 0 .5em 3em rgba(161, 177, 204, .4);
+			background-color: rgba(255, 255, 255, .6)
+		}
+
+      
+      
+      .mdui-img-fluid,
+      .mdui-video-fluid
+      {
+        border-radius:5px;
+        border:1px solid #eee
+      }
+      
+      .mdui-list{
+        padding:0
+      }
+      .mdui-list-item
+      {
+        margin:0!important;
+        border-radius:5px;
+        padding:0 10px 0 5px!important;
+        border:1px solid #eee;
+        margin-bottom:10px!important
+      }
+      .mdui-list-item:last-child{
+        margin-bottom:0!important
+      }
+      .mdui-list-item:first-child
+      {
+        border:none
+      }
+      .mdui-toolbar
+      {
+        width:auto;
+        margin-top:1rem!important/*链接导航高度*/
+        
+      }
+      .mdui-appbar .mdui-toolbar{
+        height:56px;
+        font-size:16px;
+      }
+      .mdui-toolbar>*{
+        padding:0 6px;
+        margin:0 2px;
+        opacity:0.9;/*路径透明度*/
+      }
+      .mdui-toolbar>.mdui-typo-headline{
+        padding:0 16px 0 0
+      }
+      .mdui-toolbar>i{
+        padding:0
+      }
+
+      .mdui-toolbar>a:hover,
+      a.mdui-typo-headline,
+      a.active{
+        opacity:1
+      }
+      
+      
+      
+      .mdui-typo-display-2-opacity
+		{
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: rgb(255, 255, 255);
+	opacity: 1;
+    }
+      
+     .mdui-textfield.mdui-textfield-floating-label .mdui-icon.material-icons {
+			color: rgb(255, 255, 255);
+}
+.mdui-textfield.mdui-textfield-floating-label .mdui-textfield-label {
+			color: rgb(255, 255, 255);
+}
+			
+		
+		.mdui-textfield.mdui-textfield-floating-label .mdui-textfield-input {
+			color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(255, 255, 255, .68);
+  border-bottom-color: #ffffff;
+  border-radius: 0;
+  box-shadow: 0 1px 0 0 #ffffff;
+		} 
+      
+      
+      
+      
+      .mdui-container{
+        max-width:980px
+      }
+      .mdui-list>.th{
+        background-color:initial/*文件框颜色*/
+        
+      }
+      .mdui-list-item>a {
+	    width: 100%;
+	    line-height: 5px/*文件框大小*/
+	    
+}
+
+      .mdui-toolbar>*{
+        padding:0 16px;
+        background: linear-gradient(50deg, #7FFFD4, #54FF9F, #FFD700);
+        color: #fff;
+        line-height:25px;
+        border-radius:15px;
+        border:2px solid  #eee;
+      }
+      .mdui-toolbar>a:last-child{
+        opacity:1;
+        background: linear-gradient(100deg, #8A2BE2, #9932CC, #EE1289);
+        color:#fff;
+
+      }
+
+      @media screen and (max-width:980px){
+       .mdui-toolbar
+      {
+      	
+       display: inline-block!important; 
+        width:auto!important;
+        line-height:1rem!important;
+        margin-top:1rem!important/*链接导航高度*/
+        
+      }
+        
+        .mdui-list-item .mdui-text-right
+        {
+        width:auto;
+        line-height:1rem
+       
+        }
+        .mdui-container
+        {
+
+          width:100%!important;
+          margin-top:1px!important;
+          margin:0
+        }
+
+
+
+        .mdui-toolbar>*{
+        padding:0 16px;
+        background: linear-gradient(100deg, #7FFFD4, #54FF9F, #FFD700);
+        color: #fff;
+        line-height:1.1rem;
+        border-radius:5px;
+        border:3px solid  #eee;
+        }
+       .mdui-toolbar>a:hover,
+      a.mdui-typo-headline,
+      a.active{
+        opacity:1
+      }
+
+      }
+.mdui-theme-accent-blue .mdui-color-theme-accent {
+  color: #fff !important;
+  background-color: #35B995 !important;
+}
+.mdui-theme-accent-blue .mdui-typo a {
+  color: #35B995;
+}
+.mdui-theme-accent-blue .mdui-typo a:before {
+  background-color: #35B995;
+}
+.mdui-theme-accent-blue .mdui-textfield-focus .mdui-textfield-input {
+  border-bottom-color: #35b995;
+  -webkit-box-shadow: 0 1px 0 0 #35b995;
+          box-shadow: 0 1px 0 0 #35b995;
+}
+.mdui-theme-accent-blue .mdui-textfield-focus .mdui-textfield-label,
+.mdui-theme-accent-blue .mdui-textfield-focus .mdui-textfield-floating-label.mdui-textfield-focus .mdui-textfield-label,
+.mdui-theme-accent-blue .mdui-textfield-focus .mdui-icon {
+  color: #35B995;
+}
+.mdui-theme-primary-blue-grey .mdui-color-theme {
+  color: #fff !important;
+  background-color: #7e7e7e !important;
+}
+.mdui-typo code {
+  padding: 2px 4px;
+  color: #E67474;
+  background-color: #f9f9f9;
+  border-radius: 2px;
+}
+
+
+/*新增CSS*/
+body {
+	background: #eeeeee;
+}
+
+.mdui-theme-primary-blue-grey .mdui-color-theme {
+	background: #ff96ad!important;
+}
+@keyframes thrill {
+	from {
+		transform: rotate(2deg);
+	}
+
+	to {
+		transform: rotate(-2deg);
+	}
+}
+
+@keyframes comeIn {
+	from {
+		bottom: -20px;
+	}
+
+	to {
+		bottom: 30px;
+	}
+}
+
+#comeIn {
+	width: 300px;
+	padding: 16px 0 16px 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	margin: auto;
+	border-radius: 16px;
+	background: rgba(227,245,255,.4);
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+	animation: comeIn .5s forwards;
+}
+
+#blog {
+	width: 300px;
+	padding: 16px 0 16px 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	margin: auto;
+	border-radius: 16px;
+	animation: thrill 2s infinite alternate ease-in-out;
+}
+@media all and (min-width:1280px){
+#comeIn, #blog{
+width:300px;
+}
+}
+@media all and (max-width:369px){
+#comeIn, #blog{
+	transform: scale(0.8);
+    width: 300px;
+	padding: 16px 0 16px 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 10px;
+	margin: auto;
+	border-radius: 30px;
+}
+}
+
+#comeIn:hover,#comeIn:active {
+	background-color: rgba(227,245,255,.3);
+}
+
+.links {
+	width: 100%;
+	text-decoration: none;
+	color: black;
+	font-weight: 300;
+	padding: 16px 0 16px 0;
+}
+
+div:hover .links {
+	color: #000;
+}
+
+#a1:hover {
+    color:black;
+}
+#a2:hover {
+    color:black;
+}
+#a3:hover {
+    color:black;
+}
+
+/*HEAD.md样式*/
+.mdui-typo{
+    padding-bottom:0!important;
+}
+.mdui-typo blockquote{
+    border-radius:8px;
+}
+.mdui-typo pre{
+    margin-right:16px;
+    border-radius:8px;
+}
+.mdui-typo p{
+    padding: 5px 0 5px 0;
+    color:black;
+}
+
+::selection {
+	background-color: #ff96ad;
+    color: #ffffff;
+}
+
+div#downall{
+width:60px;
+padding:12px 8px 12px 8px;
+border-radius:8px;
+background:rgba(227,245,255,.3);
+left:0;
+right:0;
+margin:auto;
+text-align:center;
+margin-bottom:14px
+}
+a#downall{
+padding:12px 0 12px 0;
+text-decoration:none;
+color:black;
+}
+
+/*按钮2*/
+.btn {
+  top: 10px;
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-family: Lato, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  border: transparent;
+  outline: transparent;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  animation: glow 8s linear infinite;
+}
+.btn-gradient {
+  color: white;
+  /*background: linear-gradient(100deg, #00dbde, #fc00ff, #00dbde);*/
+  background: linear-gradient(100deg, #0000CD, #FF0000, #B23AEE);
+  background-size: 300%;
+  border-radius: 2em;
+  border:2px solid  #eee
+
+}
+.btn-gradient::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  background: inherit;
+  background-size: inherit;
+  border-radius: 4em;
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn-gradient:hover::before {
+  opacity: 1;
+  filter: blur(20px);
+  animation: glow 8s linear infinite;
+}
+@keyframes glow {
+		from {
+		bottom: -20px;
+	}
+
+	to {
+		bottom: 30px;
+	}
+
+
+
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+
+}
+#glow {
+	width: 300px;
+	padding: 16px 0 16px 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	margin: auto;
+	border-radius: 16px;
+	background: rgba(227,245,255,.4);
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+	animation: glow .5s forwards;
+}
