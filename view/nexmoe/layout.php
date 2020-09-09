@@ -16,7 +16,7 @@
 
 body {
 	background-color: #fff;
-	background-image:url(https://s2.ax1x.com/2019/05/10/E2JNM8.jpg) !important;
+	background-image:url(https://cdn.jsdelivr.net/gh/cdnapi/img/4KBG.jpg) !important;
 	padding-bottom: 60px;
 	background-position:auto!important;
 	background-size: cover !important;
@@ -27,7 +27,7 @@ body {
   
 @media screen and (max-device-width:980px){
    body {
-	background-image:url(https://ae01.alicdn.com/kf/H53a20f9dcdb84181a24adbcc1a3fbf062.jpg) !important;
+	background-image:url(https://cdn.jsdelivr.net/gh/cdnapi/img/SJBG.jpg) !important;
 	background-position:auto!important;
 	background-size: cover !important;
 	background-attachment: fixed !important;
